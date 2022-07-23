@@ -1,0 +1,15 @@
+h1
+{
+    text-align: center;
+    font-size: 40px;
+    color: goldenrod;
+}
+body
+{
+    background-color: lightgreen;
+}
+table, th, td {
+  text-align: center;
+  border: 1px solid red;
+  border-radius: 5px;
+}

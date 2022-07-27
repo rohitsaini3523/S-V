@@ -21,12 +21,32 @@ int main()
     getline(cin, s);
     for (int i = 0; i < s.length(); i++)
     {
+        if(s[i]>64 && s[i]<91 )
+            s[i] += 32;
         if (s[i] > 96 && s[i] < 123)
             s[i] = key[s[i] - 'a'];
+        else if(s[i] == ' ')
+        {
+            s[i] = ' ';
+        }
+        else if(s[i]>47 && s[i]<58)
+        {
+            s[i] = s[i];
+        }
     }
     cout << "Encrypted text: " << s << "\n";
     for (int i = 0; i < s.length(); i++)
     {
+        if (s[i] == ' ')
+        {
+            s[i] = ' ';
+            continue;
+        }
+        else
+        {
+            s[i] = s[i];
+            continue;
+        }
         s[i] = alphabet[find(key.begin(), key.end(), s[i])-key.begin()];
     }
     cout << "Decrypted text: " << s << "\n";

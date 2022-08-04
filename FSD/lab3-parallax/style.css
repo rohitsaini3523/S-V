@@ -25,36 +25,22 @@ body, html {
 }
 .pimg1
 {
-    background-image: url(/logo.jpg); 
+    background-image: url(images/logo.jpg); 
     min-height: 100%;   
 }
 
 .pimg2
 {
-    background-image: url(/image2.cms); 
+    background-image: url(images/image2.cms); 
     min-height: 400px;   
 }
 .pimg3
 {
-    background-image: url(/image3.avif); 
+    background-image: url(images/image3.avif); 
     min-height: 400px;   
 }
 .pimg4
 {
-    background-image: url(/image4.jpg); 
+    background-image: url(images/image4.jpg); 
     min-height: 400px;   
-}
-.parallax {
-  /* The image used */
-  background-image: url("logo.jpg");
-
-  /* Full height */
-  height: 100%;
-  width: 100%;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }

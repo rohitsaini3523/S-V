@@ -127,12 +127,22 @@ void swap_value(int a[3][3], int index,int moves)
         i = 2;
         j = index - 7;
     }
-    // cout << index << "\n";
-    // cout <<"\n" <<i << " "<< j;
-    // cout << "\n"
-    //      << moves;
+    cout << "\nPlace in matrix: ";
+    cout << index << "\n";
+    cout <<"\n Coordinates: " <<i << " "<< j;
+    cout << "\nTotal Moves: " << moves;
+    int f = 12;
+    int final_state[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    node n[moves];
     // swapping the zero and calculating h value;
-    
+    for (int i = 0; i < moves; i++)
+    {
+        if (index = 1)
+        {
+            swap(a[0][0], a[1][0]);
+        }
+        
+    }
 
 }
 void A_star(vector<char> graph_node, vector<pair<pair<char, char>, int>> graph_edge, list<char> graph_intial_state, list<char> graph_final_state)

@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Box Model</title>
+    <style>
+        .container
+        {
+            background-color: burlywood;
+            border: 3px solid rgb(79, 124, 192);
+            padding: 34px 19px; /*top right bottom left*/
+            margin: 14px 19px;
+            border-radius: 23px;
+            width:233px;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h3>This is heading</h3>
+        <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro molestias, laborum quia harum vel rem exercitationem veritatis deleniti quo magni ipsum autem sapiente.</p>
+    </div>
+    <div class="container">
+        <h3>This is heading</h3>
+        <p id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro molestias, laborum quia harum vel rem exercitationem veritatis deleniti quo magni ipsum autem sapiente.</p>
+    </div>
+    <div class="container">
+        <h3>This is heading</h3>
+        <p id="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro molestias, laborum quia harum vel rem exercitationem veritatis deleniti quo magni ipsum autem sapiente.</p>
+    </div>
     
 </body>
 </html>

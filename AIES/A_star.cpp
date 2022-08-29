@@ -165,11 +165,11 @@ void convert_to_node(int intial_state[3][3], int final_state[3][3])
             moves = 4;
         else if (index == 2 || index == 4 || index == 6 || index == 8)            
             moves = 3;
-        // for (int i = 0; i < moves; i++)
-        // {
+        for (int i = 0; i < moves; i++)
+        {
             swap_value(intial_state, index,moves);
             break;
-            //}
+            }
             // swaping value
         
     }

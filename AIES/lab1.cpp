@@ -172,7 +172,7 @@ int main()
     int initial[N][N] =
         {
             {1, 2, 3},
-            {4, 6, 0},
+            {4, 0, 6},
             {7, 5, 8}};
 
     // Solvable Final configuration

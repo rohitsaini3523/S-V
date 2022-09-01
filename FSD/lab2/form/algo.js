@@ -33,11 +33,8 @@ function validate_form() {
   }
 
   var pass = document.forms["myform"]["fpass"].value;
-  if (pass == /^(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,20}$/) {
-    set_error(
-      "pass",
-      "*Enter password between 8 to 20 characters which contain at least one numeric digit, one uppercase, and one lowercase letter,"
-    );
+  if (pass.length < 8 || pass.length > 20) {
+    set_error("pass", "*Enter password between 8 to 20 characters");
     return_value = false;
   }
   var cpass = document.forms["myform"]["fcpass"].value;

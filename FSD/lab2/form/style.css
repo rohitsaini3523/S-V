@@ -1,0 +1,59 @@
+body {
+  background-color: rgb(123, 255, 0);
+}
+
+.form_design {
+  font-size: 22px;
+}
+
+.form_design input {
+  width: 50%;
+  padding: 12px 20px;
+  border: 0px solid blue;
+  border-radius: 20px;
+  font-size: 20px;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form_design input::placeholder {
+  text-align: center;
+}
+
+.form_error {
+  color: red;
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.button {
+  border-radius: 25px;
+  background-color: red;
+  border: 0px solid black;
+  width: 300px;
+  color: white;
+  height: 50px;
+  font-size: 22px;
+  margin: 20px 20px;
+  padding: 10px 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: rgba(6, 251, 2, 0.442);
+  color: black;
+}
+
+h1 {
+  color: rgb(3, 63, 3);
+}
+
+.form {
+  border: 2px solid red;
+  /* margin: 100px 40px; */
+  border-radius: 70px;
+  /* padding: 30px 30px; */
+  background-color: rgb(11, 235, 255);
+}

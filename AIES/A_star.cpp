@@ -137,11 +137,10 @@ void swap_value(int a[3][3], int index,int moves)
     // swapping the zero and calculating h value;
     for (int i = 0; i < moves; i++)
     {
-        if (index = 1)
+        if(i==0)
         {
-            swap(a[0][0], a[1][0]);
-        }
-        
+            swap(a[i][j],a[i])
+        }     
     }
 
 }

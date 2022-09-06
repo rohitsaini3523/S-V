@@ -1,12 +1,15 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
 vector<int> use(10);
+
 struct node
 {
    char letter;
    int value;
 };
+
 int isValid(node *nodeList, const int count, string s1, string s2, string s3)
 {
    int val1 = 0, val2 = 0, val3 = 0, m = 1, j, i;
@@ -43,6 +46,7 @@ int isValid(node *nodeList, const int count, string s1, string s2, string s3)
       return 1;
    return 0;
 }
+
 bool permutation(int count, node *nodeList, int n, string s1, string s2, string s3)
 {
    if (n == count - 1)
@@ -77,6 +81,7 @@ bool permutation(int count, node *nodeList, int n, string s1, string s2, string 
    }
    return false;
 }
+
 bool solvePuzzle(string s1, string s2, string s3)
 {
    int uniqueChar = 0;
@@ -109,11 +114,18 @@ bool solvePuzzle(string s1, string s2, string s3)
    }
    return permutation(uniqueChar, nodeList, 0, s1, s2, s3);
 }
+
 int main()
 {
-   string s1 = "BASE";
-   string s2 = "BALL";
-   string s3 = "GAMES";
+   string s1;
+   cout << "S1: ";
+   cin >> s1;
+   string s2;
+   cout << "S2: ";
+   cin >> s2;
+   string s3;
+   cout << "S3: ";
+   cin >> s3;
    if (solvePuzzle(s1, s2, s3) == false)
       cout << "No solution";
 }

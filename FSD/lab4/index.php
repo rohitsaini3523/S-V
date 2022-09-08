@@ -17,7 +17,7 @@
             <a><img class="centre" style="border:3px solid black;border-radius:70%;" src="profile.jpg"
                     alt="Profile Photo" width="7%" height="7%" onclick="
             document.getElementById('profile').src='profile1.jpg';" id="profile"></a>
-            <form action="myaction.php" name="myform" onsubmit="return validate_form()" method="post">
+            <form name="myform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validate_form()">
                 <div class="form_design" id="name">
                     <input type="text" name="fname" id="" required placeholder="Enter Your name"><b><br><span
                             class="form_error"></span></b>
@@ -54,6 +54,52 @@
     </div>
     </div>
     </form>
+    <?php
+// define variables and set to empty values
+$name = $email = $phno = $pass = $cpass = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = test_input($_POST["fname"]);
+  $email = test_input($_POST["femail"]);
+  $phno = test_input($_POST["fphno"]);
+  $pass = test_input($_POST["fpass"]);
+  $cpass = test_input($_POST["fcpass"]);
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+    <?php
+    /* echo "<h2>Your Input:</h2>";
+    echo $name;
+    echo "<br>";
+    echo $email;
+    echo "<br>";
+    echo $phno;
+    echo "<br>";
+    echo $pass;
+    echo "<br>";
+    echo $cpass; */
+    if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
+    echo 'We don\'t have mysqli!!!';
+} else {
+    echo 'Phew we have it!';
+}
+
+    if($name != "" && $phno !="" && $email !="" && $pass != "" && $cpass != "")
+    {
+        $conn = new MySQLi("localhost","root","","regestration_records");
+        if($conn == false)
+        {
+            die("Connection Failed: ". $conn->connect_error);
+        }
+        echo "Connected Successfully";
+    }
+?>
     <script src="algo.js">
 
     </script>

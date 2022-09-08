@@ -84,20 +84,23 @@ function test_input($data) {
     echo $pass;
     echo "<br>";
     echo $cpass; */
-    if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
+    /* if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
     echo 'We don\'t have mysqli!!!';
 } else {
     echo 'Phew we have it!';
-}
+} */
 
     if($name != "" && $phno !="" && $email !="" && $pass != "" && $cpass != "")
     {
-        $conn = new MySQLi("localhost","root","","regestration_records");
+        $conn = new MySQLi('localhost','root','','regestration_records');
         if($conn == false)
         {
             die("Connection Failed: ". $conn->connect_error);
         }
-        echo "Connected Successfully";
+        // echo "Connected Successfully";
+        $query = "INSERT into records VALUES('$name','$email','$phno','$pass','$cpass');";
+        // echo $query;
+        mysqli_query($conn,$query);
     }
 ?>
     <script src="algo.js">

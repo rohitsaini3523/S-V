@@ -19,7 +19,11 @@ function validate_form() {
     set_error("name", "*Length of name is too short");
     return_value = false;
   }
-
+  if (name.length > 20) {
+    set_error("name", "*Length of name is too Long");
+    return_value = false;
+  }
+  
   var email = document.forms["myform"]["femail"].value;
   if (email.length > 30) {
     set_error("email", "*Length of Email is too long");
@@ -43,4 +47,13 @@ function validate_form() {
     return_value = false;
   }
   return return_value;
+}
+
+function changeImage() {
+  var image = document.getElementById("status_profile");
+  if (image.src.match("profile1")) {
+    image.src = "profile.jpg";
+  } else {
+    image.src = "profile1.jpg";
+  }
 }

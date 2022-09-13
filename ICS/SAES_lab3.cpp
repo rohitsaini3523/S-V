@@ -10,7 +10,7 @@ int printRandoms(int lower, int upper)
 
 string generate_key(string key)
 {
-    char hex[16] = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'A', 'B', 'C', 'D', 'E', 'F'};
+    char hex[16] = {'0','1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
     key = "";
     for (int i = 0; i < 4; i++)
         key.push_back(hex[printRandoms(0, 31) * (i + 1) % 16]);
@@ -106,6 +106,7 @@ string rcon(int n)
         return "10000000";
     if (n == 2)
         return "00110000";
+    return 0;
 }
 
 string convert_to_hex(int n)
@@ -140,6 +141,7 @@ string convert_to_hex(int n)
         return "E";
     if (n == 15)
         return "F";
+    return 0;
 }
 
 string SubNib(string s, int k)
@@ -322,7 +324,8 @@ int main()
     cout << round_key[2] << "\n";
     cout << "Enter Plain text: ";
     getline(cin, input);
-    input = convert_hex_to_binary(input,3);
+    input = input = convert_hex_to_binary(input, 1);
+    cout << "Input: " << input;
     // int size_input = input.size();
     string temp;
     string temp2;

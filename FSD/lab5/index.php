@@ -17,7 +17,7 @@
         <div class="container" style="padding: 15%;">
             <h1 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">School of Computers</h1>
             <button type="button" class="btn" style="background-color:yellow;"><a href="regestration.php" style="text-decoration:none;color:red;">Sign up</a></button>
-            <button type="button" class="btn" style="background-color:lightblue;"><a href="login.php" style="text-decoration:none;color:black;">Sign in</a></button>
+            <button type="button" class="btn" style="background-color:lightblue;"><a href="login.html" style="text-decoration:none;color:black;">Sign in</a></button>
         </div>
     </center>
 </body>

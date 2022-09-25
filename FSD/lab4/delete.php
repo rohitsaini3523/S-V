@@ -81,7 +81,7 @@
         } catch (Exception $e) {
             echo '<script>alert("SuccesFully Deleted")</script>';
             sleep(2);
-            header("Location: /lab4/login.html");
+            header("Location: /lab4/login.php");
             exit;
         }
     }

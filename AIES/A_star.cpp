@@ -139,7 +139,7 @@ void swap_value(int a[3][3], int index,int moves)
     {
         if(i==0)
         {
-            swap(a[i][j],a[i])
+            swap(a[i][j], a[j][i]);
         }     
     }
 

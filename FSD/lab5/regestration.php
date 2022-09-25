@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="padding:1%">
+<body>
     <center>
         <h1 id="form"></h1>
-        <div class="form" style="width:60% ;">
+        <div class="form" style="width:100% ;">
             <h1 style=" color:black; font-size: large;" id="heading">Registeration Form</h1>
             <form name="myform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" onsubmit="return validate_form()">
                 <img class="centre" style="border:3px solid black;border-radius:70%;" src="profile.jpg" alt="Profile Photo" id="status_profile" width="7%" height="7%" onclick="changeImage()" name="status_profile">
@@ -36,7 +36,7 @@
                     <input type="password" name="fcpass" id="" required placeholder="Confirm Password"><b><br><span class="form_error"></span></b>
                 </div>
                 <input type="submit" class="button" value="Submit" id="submitbutton">
-                <h1 style=" color:black; font-size: large;" id="checker"><a href="login.php" style="color:black ;text-decoration:none;">Already Registered?</a></h1>
+                <h1 style=" color:black; font-size: large;" id="checker"><a href="login.html" style="color:black ;text-decoration:none;">Already Registered?</a></h1>
     </center>
     </div>
     </div>

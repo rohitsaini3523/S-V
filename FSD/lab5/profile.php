@@ -1,13 +1,3 @@
-<?php
-// Initialize the session
-session_start();
- 
-// Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: welcome.php");
-    exit;
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +15,14 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 </head>
 
 <body>
+    <center>
+        <div class="container" style="padding: 15%;">
+            <h1 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" id="username"></h1>
+            <button type="button" class="btn" style="background-color:yellow;"><a href="update.php" style="text-decoration:none;color:red;">Update</a></button>
+            <button type="button" class="btn" style="background-color:lightblue;"><a href="delete.php" style="text-decoration:none;color:black;">Delete</a></button>
+            <button type="button" class="btn" style="background-color:red;"><a href="index.php" style="text-decoration:none;color:white;">Logout</a></button>
+        </div>
+    </center>
     <?php
     // define variables and set to empty values
     $email = $pass = "";
@@ -32,9 +30,6 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = test_input($_POST["femail"]);
         $pass = test_input($_POST["fpass"]);
-    }
-    else{
-        header("Location: login.php");
     }
 
     function test_input($data)
@@ -46,6 +41,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     }
     ?>
     <?php
+
     if ($email != "" && $pass != "") {
         $conn = new MySQLi('localhost', 'root', '', 'regestration_records');
         if ($conn == false) {
@@ -59,6 +55,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
         if ($row == NULL) {
             echo '<script>alert("Not Found")</script>';
             sleep(2);
+            header("Location: /lab4/login.html");
+            exit;
         } else {
             $name = $row["name"];
             $email = $row["email"];
@@ -71,16 +69,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
             echo "PhoneNo:- $phno";
         }
     }
-    session_destroy();
     ?>
-    <center>
-        <div class="container" style="padding: 15%;">
-            <h1 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" id="username"></h1>
-            <button type="button" class="btn" style="background-color:yellow;"><a href="update.php" style="text-decoration:none;color:red;">Update</a></button>
-            <button type="button" class="btn" style="background-color:lightblue;"><a href="delete.php" style="text-decoration:none;color:black;">Delete</a></button>
-            <button type="button" class="btn" style="background-color:red;"><a href="index.php" style="text-decoration:none;color:white;">Logout</a></button>
-        </div>
-    </center>
     <script src="algo.js">
     </script>
 </body>

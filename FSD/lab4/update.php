@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body style="padding:0%">
     <center>
         <h1 id="form"></h1>
-        <div class="form" style="width:100% ;">
+        <div class="form" style="width:60% ;">
             <h1 style=" color:black; font-size: large;" id="heading">Update Information</h1>
             <form name="myform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" onsubmit="return validate_form()">
                 <img class="centre" style="border:3px solid black;border-radius:70%;" src="profile.jpg" alt="Profile Photo" id="status_profile" width="7%" height="7%" onclick="changeImage()" name="status_profile">
@@ -93,6 +93,7 @@
             }
         } catch (Exception $e) {
             echo '<script>alert("Updated Successfully")</script>';
+            header("Location: login.php");
         }
     }
     ?>

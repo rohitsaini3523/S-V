@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form </title><!-- Bootstrap css -->
+    <title>Update Information</title><!-- Bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="padding:1%">
+<body>
     <center>
         <h1 id="form"></h1>
-        <div class="form" style="width:60% ;">
-            <h1 style=" color:black; font-size: large;" id="heading">Registeration Form</h1>
+        <div class="form" style="width:100% ;">
+            <h1 style=" color:black; font-size: large;" id="heading">Update Information</h1>
             <form name="myform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" onsubmit="return validate_form()">
                 <img class="centre" style="border:3px solid black;border-radius:70%;" src="profile.jpg" alt="Profile Photo" id="status_profile" width="7%" height="7%" onclick="changeImage()" name="status_profile">
                 <div class="form_design" id="name">
@@ -35,8 +35,7 @@
                 <div class="form_design" id="cpass">
                     <input type="password" name="fcpass" id="" required placeholder="Confirm Password"><b><br><span class="form_error"></span></b>
                 </div>
-                <input type="submit" class="button" value="Submit" id="submitbutton">
-                <h1 style=" color:black; font-size: large;" id="checker"><a href="login.php" style="color:black ;text-decoration:none;">Already Registered?</a></h1>
+                <input type="submit" class="button" value="Update" id="submitbutton">
     </center>
     </div>
     </div>
@@ -84,16 +83,16 @@
             die("Connection Failed: " . $conn->connect_error);
         }
         // echo "Connected Successfully";
-        $query = "INSERT into records VALUES('$name','$email','$phno','$pass','$cpass');";
+        $query = "update records SET name ='$name',email='$email',phoneno='$phno',password='$pass',confirm_password='$cpass' where email='$email';";
         // echo $query;
         try {
             if (mysqli_query($conn, $query) == true) {
-                throw new Exception('SuccesFully Regestered');
+                throw new Exception('Updated Successfully');
             } else {
-                echo '<script>alert("Already Exists")</script>';
+                echo '<script>alert("Not found")</script>';
             }
         } catch (Exception $e) {
-            echo '<script>alert("SuccesFully Regestered")</script>';
+            echo '<script>alert("Updated Successfully")</script>';
         }
     }
     ?>

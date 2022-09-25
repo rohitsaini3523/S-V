@@ -23,6 +23,7 @@ function validate_form() {
     set_error("name", "*Length of name is too Long");
     return_value = false;
   }
+  
   var email = document.forms["myform"]["femail"].value;
   if (email.length > 30) {
     set_error("email", "*Length of Email is too long");

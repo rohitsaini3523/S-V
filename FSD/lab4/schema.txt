@@ -1,0 +1,3 @@
+create database regestration_records;
+use regestration_records;
+create table records(name varchar(20),email varchar(50),phoneno varchar(10),password varchar(20),confirm_password varchar(20));

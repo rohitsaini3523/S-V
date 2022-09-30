@@ -21,19 +21,19 @@
             <form name="myform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" onsubmit="return validate_form()">
                 <img class="centre" style="border:3px solid black;border-radius:70%;" src="profile.jpg" alt="Profile Photo" id="status_profile" width="7%" height="7%" onclick="changeImage()" name="status_profile">
                 <div class="form_design" id="name">
-                    <input type="text" name="fname" id="" required placeholder="Enter Your name"><b><br><span class="form_error"></span></b>
+                    <input type="text" name="fname" id="setname" required placeholder="Enter Name"><b><br><span class="form_error"><?php $name ?></span></b>
                 </div>
                 <div class="form_design" id="email">
-                    <input type="email" name="femail" id="" required placeholder="Enter E-mail here"><b><br><span class="form_error"> </span></b>
+                    <input type="email" name="femail" id="setemail" required placeholder="Enter E-mail here"><b><br><span class="form_error"> </span></b>
                 </div>
                 <div class="form_design" id="phno">
-                    <input type="number" name="fphno" id="" required placeholder="Enter Phone Number"><b><br><span class="form_error"> </span></b>
+                    <input type="number" name="fphno" id="setphno" required placeholder="Enter Phone Number"><b><br><span class="form_error"> </span></b>
                 </div>
                 <div class="form_design" id="pass">
-                    <input type="password" name="fpass" id="" required placeholder="Password"><b><br><span class="form_error"></span></b>
+                    <input type="password" name="fpass" id="setpass" required placeholder="Password"><b><br><span class="form_error"></span></b>
                 </div>
                 <div class="form_design" id="cpass">
-                    <input type="password" name="fcpass" id="" required placeholder="Confirm Password"><b><br><span class="form_error"></span></b>
+                    <input type="password" name="fcpass" id="setcpass" required placeholder="Confirm Password"><b><br><span class="form_error"></span></b>
                 </div>
                 <input type="submit" class="button" value="Update" id="submitbutton">
     </center>

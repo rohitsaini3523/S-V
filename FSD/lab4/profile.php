@@ -1,13 +1,3 @@
-<?php
-// Initialize the session
-session_start();
- 
-// Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: welcome.php");
-    exit;
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,7 +48,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
         if ($row == NULL) {
             echo '<script>alert("Not Found")</script>';
-            sleep(2);
+            header("Location: /lab4/login.php");
         } else {
             $name = $row["name"];
             $email = $row["email"];
@@ -71,7 +61,6 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
             echo "PhoneNo:- $phno";
         }
     }
-    session_destroy();
     ?>
     <center>
         <div class="container" style="padding: 15%;">

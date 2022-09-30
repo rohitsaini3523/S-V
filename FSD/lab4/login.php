@@ -1,11 +1,13 @@
 <?php
-// Initialize the session
 session_start();
-
-// Check if the user is already logged in, if yes then redirect him to welcome page
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: welcome.php");
+if (isset($_SESSION["email"]) && $_SESSION["pass"] === true) {
+    header("location: profile.php");
     exit;
+}
+else
+{
+    $_SESSION["email"] = false;
+    $_SESSION["pass"] = false;
 }
 ?>
 <!DOCTYPE html>
@@ -45,9 +47,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     
     <script src="algo.js">
     </script>
-    <?php
-    session_destroy();
-    ?>
+
 </body>
 
 </html>

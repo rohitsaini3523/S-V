@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form </title>
+    <title>Registration Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,8 +15,7 @@
         <div class="form" style="width:100% ;">
             <h1 style=" color:black; font-size: large;" id="heading">Registeration Form</h1>
             <a><img class="centre" style="border:3px solid black;border-radius:70%;" src="profile.jpg"
-                    alt="Profile Photo" width="7%" height="7%" onclick="
-            document.getElementById('profile').src='profile1.jpg';" id="profile"></a>
+                    alt="Profile Photo" width="7%" height="7%" onclick="document.getElementById('profile').src='profile1.jpg';" id="profile"></a>
             <form action="myaction.php" name="myform" onsubmit="return validate_form()" method="post">
                 <div class="form_design" id="name">
                     <input type="text" name="fname" id="" required placeholder="Enter Your name"><b><br><span
@@ -31,7 +30,7 @@
                             class="form_error"> </span></b>
                 </div>
                 <div class="form_design" id="pass">
-                    <input type="password" name="fpass" id="" required placeholder="Password"><b><br><span
+                    <input type="password" name="fpass" id="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required placeholder="Password"><b><br><span
                             class="form_error"></span></b>
                 </div>
                 <div class="form_design" id="cpass">
@@ -54,9 +53,7 @@
     </div>
     </div>
     </form>
-    <script src="algo.js">
-
-    </script>
+    <script src="algo.js"></script>
 </body>
 
 </html>

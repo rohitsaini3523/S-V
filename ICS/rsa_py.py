@@ -27,8 +27,8 @@ def random_index(l):
     return l[random.randint(0,len(l)-1)]
 def main():
     l = random_prime()
-    p = random_index(l)
-    q = random_index(l)
+    p = 7
+    q = 17
     print(f"P: {p}")
     print(f"Q: {q}")
     for i in range(2,(p-1)*(q-1)):

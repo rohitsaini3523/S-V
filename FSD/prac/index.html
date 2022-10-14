@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ol type="I">
+    <li>This is the First item.</li>
+    <li>This is the Second item.</li>
+    <ul type="circle">
+      <li>This is inside the first in the Second item List</li>
+      <li>This is inside the second in the Second item List</li>
+    </ul>
+    <li>This is the First item.</li>
+  </ol>
+  <h3> This is the Table</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Employee ID</th>
+        <th>Employee Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rohit</td>
+        <td>243280</td>
+        <td>SDE-1</td>
+      </tr>
+      <tr>
+        <td>Ritesh Saini</td>
+        <td>214384</td>
+        <td>Android Developer</td>
+      </tr>
+      <tr>
+        <td>Lucky</td>
+        <td>227360</td>
+        <td>SDE-2</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>This is Html Form</p>
+  <form action="backend.php">
+    <label for="name">Name: </label>
+    <div>
+      <input type="text" name="myname" id="name">
+    </div>
+    <br>
+    <div>
+      Role: <input type="text" name="myrole">
+    </div>
+    <br>
+    <div>
+      Email:<input type="email" name="myemail">
+    </div>
+    <br>
+    <div>
+      Date: <input type="date" name="Date" id="mydate">
+    </div>
+    <br>
+    <div>
+      Bonus: <input type="number" value="mybonus">
+    </div>
+    <br>
+    <label for="eligible">Are you Student?</label>
+    <div>
+      <input type="checkbox" value="eligiblity" id="eligible">
+    </div>
+    <br>
+    <div>
+      Gender: Male<input type="radio" name="myGender"> Female<input type="radio" name="myGender">
+    </div>
+    <br>
+    <div>
+      <label for="car">Car</label>
+      <select name="myCar" id="car">
+        <option value="ind">Indica</option>
+        <option value="swf">Swift</option>
+      </select>
+    </div>
+    <br>
+    <div>
+      Write about yourself: <br><textarea name="myText" cols="70" rows="10"></textarea>
+    </div>
+    <br>
+    <div>
+      <input type="submit" value="Submit Now">
+      <input type="reset" value="Reset Now">
+    </div>
+  </form>
+</body>
+
+</html>

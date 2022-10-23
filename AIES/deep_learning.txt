@@ -1,0 +1,5 @@
+Problem in Machine Learning is it can not recognize speech or recognize objects.
+Deep Learning was design to overcome these and other obstacles.
+Deep Learning is a subset of Machine Learning.
+it is based on pattern recognition by passing input through various
+layers of the neural network.
